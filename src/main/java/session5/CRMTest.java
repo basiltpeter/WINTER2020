@@ -1,5 +1,7 @@
 package session5;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -20,7 +22,10 @@ public class CRMTest {
 					"C:\\Users\\basil\\Winter2020 selenium\\class5\\drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
+driver.manage().deleteAllCookies();
+driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
+driver.get("http://techfios.com/test/billing/?ng=admin");
+	
 	}
-
 }
